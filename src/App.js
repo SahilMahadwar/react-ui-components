@@ -1,17 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-const Title = styled.h1`
-  color: red;
-  font-size: 25rem;
-  background-color: aqua;
-`;
+import ButtonPage from './routes/ButtonPage';
 
 const App = () => {
   return (
-    <div>
-      <Title>App</Title>;
-    </div>
+    <Router>
+      <Route path="/button" exact component={ButtonPage} />
+    </Router>
   );
 };
 
